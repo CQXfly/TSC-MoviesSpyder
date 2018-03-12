@@ -1,0 +1,33 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "name": "DEBUG",
+            // "preLaunchTask": "compile",
+            "program": "${workspaceRoot}/src/app.ts",
+            "request": "launch",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "runtimeExecutable": null,
+            "sourceMaps": true,
+            "stopOnEntry": false,
+            "type": "node",
+            "outFiles": [
+                "${workspaceRoot}/build/**/*.js"
+            ],
+            "skipFiles": [
+                "node_modules/**/*.js"
+            ]
+        }
+    ]
+}
