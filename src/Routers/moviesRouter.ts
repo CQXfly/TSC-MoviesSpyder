@@ -1,4 +1,4 @@
-import * as Router from 'Koa-router'
+import * as Router from 'koa-router'
 import {flyController,moviesController} from '../Controllers/moviesControllers'
 import { movies } from '../Model/movie';
 

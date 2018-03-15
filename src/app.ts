@@ -1,4 +1,4 @@
-import * as Koa from 'Koa'
+import * as Koa from 'koa'
 import * as mongoose from 'mongoose'
 import * as Router from 'koa-router'
 import {moviesRouter} from './Routers/moviesRouter'

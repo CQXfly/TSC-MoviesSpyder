@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Koa = require("Koa");
+const Koa = require("koa");
 const mongoose = require("mongoose");
 const Router = require("koa-router");
 const moviesRouter_1 = require("./Routers/moviesRouter");

@@ -1,10 +1,9 @@
-import {IRouterContext} from 'Koa-router'
+import {IRouterContext} from 'koa-router'
 import * as cheerio from 'cheerio'
 import * as superagent from 'superagent'
 import {Request,Response} from 'superagent'
 import * as charset from 'superagent-charset'
 import * as Mongoose from 'mongoose'
-import Axios, { AxiosInstance } from 'axios'
 import {MovieModel, IMovie,MovieClassModel} from '../Model/movie'
 import { resolve } from 'path';
 
