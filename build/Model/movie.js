@@ -28,7 +28,8 @@ const schema = new mongoose_1.Schema({
     subtitle: { type: 'string' },
     time: { type: 'string' },
     webSiteFrom: { type: 'string' },
-    hotCount: { type: 'string' }
+    hotCount: { type: 'string' },
+    download_href: { type: 'string' }
 });
 schema.methods.createMovieBy = function (movies) {
 };

@@ -94,6 +94,15 @@ function spyderDetail(url, movie) {
                 items.forEach(function (item) {
                     getItem(item, movie);
                 });
+                let href = $(el).find('table').each((index, el) => {
+                    if (index == 0) {
+                        let a = $(el).find('tbody').find('tr').find('td').find('a').text();
+                        movie.download_href = a;
+                    }
+                    else {
+                        return;
+                    }
+                });
                 resolve(movie);
             });
         });

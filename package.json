@@ -6,6 +6,12 @@
     "start": "node ./build/app.js"
   },
   "dependencies": {
+    "@types/cheerio": "^0.22.7",
+    "@types/koa": "^2.0.44",
+    "@types/koa-router": "^7.0.27",
+    "@types/mongoose": "^5.0.7",
+    "@types/node-schedule": "^1.2.2",
+    "@types/superagent": "^3.5.7",
     "cheerio": "^1.0.0-rc.2",
     "koa": "^2.5.0",
     "koa-router": "^7.4.0",

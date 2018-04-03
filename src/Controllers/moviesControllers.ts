@@ -5,7 +5,6 @@ import {Request,Response} from 'superagent'
 import * as charset from 'superagent-charset'
 import * as Mongoose from 'mongoose'
 import {MovieModel, IMovie,MovieClassModel} from '../Model/movie'
-import { resolve } from 'path';
 
 const request = charset(superagent)
 const allPages = 10;// 爬10页
@@ -29,7 +28,6 @@ const moviesController = async (ctx:IRouterContext) => {
     }else{
         movies = await MovieModel.getMoviesByIndexandSize(0,20)
     }
-    
     
     ctx.body = movies
 }
@@ -82,7 +80,11 @@ function spyderDetail(url:string,movie:MovieClassModel):Promise<MovieClassModel>
 
     let p = new Promise<MovieClassModel>((resolve,reject)=>{
         spyderRequest(url).then(response =>{
+            
             const $ = cheerio.load(response)
+
+
+
             $('div[id="Zoom"]').find("span").each(function (idx,el){
                 if (idx != 0){
                     return
@@ -102,6 +104,15 @@ function spyderDetail(url:string,movie:MovieClassModel):Promise<MovieClassModel>
                     getItem(item,movie)
                 });
 
+                let href = $(el).find('table').each((index,el)=>{
+                    if (index == 0) {
+                        let a = $(el).find('tbody').find('tr').find('td').find('a').text()
+                        movie.download_href = a
+                    } else {
+                        return
+                    }
+                })
+                
                 resolve(movie)
 
             })

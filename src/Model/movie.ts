@@ -21,6 +21,7 @@ export interface IMovie extends Document {
     time?:string
     webSiteFrom?:string
     hotCount?:string
+    download_href?:string
 }
 
 export interface IMovieModle extends IMovie, Document {
@@ -49,7 +50,8 @@ const schema = new Schema({
     subtitle: { type: 'string' },
     time: { type: 'string' },
     webSiteFrom: { type: 'string' },
-    hotCount:{type:'string'}
+    hotCount:{type:'string'},
+    download_href:{type:'string'}
 })
 
 schema.methods.createMovieBy = function (movies:IMovie){
@@ -229,5 +231,6 @@ export class MovieClassModel {
     originName?:string
     actors?:string
     commentScores?:string
+    download_href?:string
 
 }
