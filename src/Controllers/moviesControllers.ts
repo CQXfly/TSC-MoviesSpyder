@@ -21,7 +21,7 @@ const flyController = async (ctx:IRouterContext) =>{
 }
 
 const moviesController = async (ctx:IRouterContext) => {
-    const size =ctx.params['size']
+    const size =ctx.query['size']
     let movies
     if (size){
         movies = await MovieModel.getMoviesByIndexandSize(0,parseInt(size))

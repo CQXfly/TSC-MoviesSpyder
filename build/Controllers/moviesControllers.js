@@ -18,14 +18,14 @@ let index = 0;
 const url = "http://www.ygdy8.net/html/gndy/dyzz/";
 const flyController = (ctx) => __awaiter(this, void 0, void 0, function* () {
     while (index < 10) {
-        yield spyder(url, 1);
+        yield spyder(url, index);
         index++;
     }
     ctx.body = "正在努力爬取数据中....";
 });
 exports.flyController = flyController;
 const moviesController = (ctx) => __awaiter(this, void 0, void 0, function* () {
-    const size = ctx.params['size'];
+    const size = ctx.query['size'];
     let movies;
     if (size) {
         movies = yield movie_1.MovieModel.getMoviesByIndexandSize(0, parseInt(size));
