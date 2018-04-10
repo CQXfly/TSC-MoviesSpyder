@@ -18,8 +18,8 @@ let index = 0;
 const url = "http://www.ygdy8.net/html/gndy/dyzz/";
 const flyController = (ctx) => __awaiter(this, void 0, void 0, function* () {
     while (index < 10) {
-        yield spyder(url, index);
         index++;
+        yield spyder(url, index);
     }
     ctx.body = "正在努力爬取数据中....";
 });

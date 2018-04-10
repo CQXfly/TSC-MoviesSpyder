@@ -14,8 +14,9 @@ const url = "http://www.ygdy8.net/html/gndy/dyzz/";
 const flyController = async (ctx:IRouterContext) =>{
     
     while(index < 10 ){
+        index ++
         await spyder(url,index)
-        index ++ 
+         
     }
     ctx.body = "正在努力爬取数据中...."
 }
